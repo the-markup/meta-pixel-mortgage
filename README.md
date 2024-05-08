@@ -18,7 +18,7 @@ We filtered these websites to those in the top 1 million websites overall by web
 - A **button click** event when a user clicked on a button to log in or access an internal link, sending the button text.
 - A **scroll event** when a user scrolled down the page, sending the percentage of the page scrolled.
 
-When we found evidence of any of these taking place, we documented it with a screenshot showing the network activity in the browser’s Developer Tools’ Network activity panel showing the call, and the information sent. We also included a [HAR file](https://en.wikipedia.org/wiki/HAR_(file_format)) for the testing session for each site. A HAR file is an archive format supported by most major browsers that contains a recording of all network requests made and received during a browsing session. (_Note: Any instance of personal information or a login email or password appearing in plaintext in a HAR file was replaced with the string `MARKUP_REDACTED`_).
+When we found evidence of any of these taking place, we documented it with a screenshot showing the network activity in the browser’s Developer Tools’ Network activity panel showing the call, and the information sent. This resulted in the 11 domains we include here, with one folder per domain. We also included a [HAR file](https://en.wikipedia.org/wiki/HAR_(file_format)) for the testing session for each site. A HAR file is an archive format supported by most major browsers that contains a recording of all network requests made and received during a browsing session. (_Note: Any instance of personal information or a login email or password appearing in plaintext in a HAR file was replaced with the string `MARKUP_REDACTED`_).
 
 Questions? Write to us: [colin@themarkup.org](mailto:colin@themarkup.org) or [ross@themarkup.org](mailto:ross@themarkup.org)
 
@@ -29,6 +29,22 @@ Questions? Write to us: [colin@themarkup.org](mailto:colin@themarkup.org) or [ro
 * We created folders for every website we tested. Inside each folder, there are: 
     * **screenshots** of relevant data being sent to Facebook via the Meta tracking pixel 
     * **HAR files** saved during the process of documenting the data collection
+
+## Data Dictionary
+
+The data format of [meta-pixel-edtech-blacklight.csv](https://github.com/the-markup/meta-pixel-edtech/blob/main/meta-pixel-edtech-blacklight.csv) is as follows:
+
+| Column | Description |
+| --- | --- |
+| organization | The organization of the websites we tested. |
+| domain | The domain of the websites we tested. |
+| bl_domain | The domain of the websites we tested, as it appears in Blacklight. |
+| third_party_trackers, cookies | The number of ad trackers and third-party cookies found on each website. See the [Blacklight repo](https://github.com/the-markup/blacklight-collector) for more details. |
+| canvas_fingerprints, session_recorders, key_logging, meta_pixel_events | Tests for the existence of canvas fingerprinting, session recording, key logging, and Meta pixel events. See the [Blacklight repo](https://github.com/the-markup/blacklight-collector) for more details. |
+| ga | Test for the existence of Google Analytics’ “Remarketing Audiences” tool. See the [Blacklight methodology](https://themarkup.org/blacklight/2020/09/22/how-we-built-a-real-time-privacy-inspector) for more details. |
+| traffic_rank | The [Tranco](https://tranco-list.eu/) rank of each website. |
+
+
 
 ## Licensing
 Copyright 2024, The Markup News Inc.
