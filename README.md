@@ -1,6 +1,6 @@
-# Data for “Online Mortgage Lenders are Sending Sensitive Financial Information to Facebook”
+# Data for “Mortgage Brokers Sent People’s Estimated Credit, Address, and Veteran Status to Facebook”
 
-This contains the data for our story "[Online Mortgage Lenders are Sending Sensitive Financial Information to Facebook (TK)]()".
+This contains the data for our story "[Mortgage Brokers Sent People’s Estimated Credit, Address, and Veteran Status to Facebook](https://themarkup.org/pixel-hunt/2024/05/15/mortgage-brokers-sent-peoples-estimated-credit-address-and-veteran-status-to-facebook)".
 
 Dozens of mortgage-related websites transmitted information on visitors through the Meta Pixel.
 
